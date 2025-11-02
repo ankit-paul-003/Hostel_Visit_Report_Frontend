@@ -1,0 +1,67 @@
+.admin-dashboard {
+    width: 90%;
+    margin: 20px auto;
+    margin-top: 400px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h2, h3 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background: #f4f4f4;
+  }
+  
+  button {
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  .add-teacher-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .add-teacher-section input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .download-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .download-section select {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
