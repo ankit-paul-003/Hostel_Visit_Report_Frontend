@@ -1,67 +1,137 @@
 .admin-dashboard {
-    width: 90%;
+    width: 95%;
+    max-width: 1200px;
     margin: 20px auto;
-    margin-top: 400px;
     padding: 10px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-  }
-  
-  h2, h3 {
+    margin-top: 20px; /* Resetting margin-top from 400px */
+}
+
+h2, h3 {
     text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  table {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+/* Table Styling for Responsiveness */
+.forms-section, .teachers-section, .admins-section {
+    overflow-x: auto; /* Allows horizontal scrolling for tables */
+}
+
+table {
     width: 100%;
+    min-width: 600px; /* Minimum width to prevent excessive squishing */
     border-collapse: collapse;
     margin-top: 10px;
-  }
-  
-  th, td {
-    padding: 10px;
+}
+
+th, td {
+    padding: 12px 10px;
     border: 1px solid #ddd;
     text-align: left;
-  }
-  
-  th {
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+th {
     background: #f4f4f4;
-  }
-  
-  button {
+    font-weight: bold;
+}
+
+button {
     padding: 8px 12px;
     background: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
+    transition: background 0.3s;
+    white-space: nowrap; /* Prevent button text wrapping */
+}
+
+button:hover {
     background: #0056b3;
-  }
-  
-  .add-teacher-section form {
+}
+
+/* Form Sections (Add Teacher/Admin) */
+.add-teacher-section form,
+.add-admin-section form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-top: 10px;
-  }
-  
-  .add-teacher-section input {
-    padding: 8px;
+}
+
+.add-teacher-section input,
+.add-admin-section input {
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  
-  .download-section {
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+/* Download Section */
+.download-section {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  .download-section select {
-    padding: 8px;
-    margin-right: 10px;
-  }
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.download-section select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-dashboard {
+        width: 100%;
+        margin: 10px 0;
+        padding: 5px;
+    }
+
+    th, td {
+        padding: 8px 5px;
+        font-size: 0.8em;
+    }
+
+    /* Ensure forms stack vertically */
+    .add-teacher-section form,
+    .add-admin-section form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-teacher-section input,
+    .add-admin-section input,
+    .add-teacher-section button,
+    .add-admin-section button {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .download-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .download-section select,
+    .download-section button {
+        width: 100%;
+    }
+}
