@@ -22,6 +22,12 @@ section {
     border-radius: 8px;
 }
 
+/* Temporary debug style to ensure forms section is visible */
+.forms-section {
+    background-color: #f0f8ff; /* Light blue background */
+    border: 2px solid red;
+}
+
 /* Table Styling for Responsiveness */
 .forms-section, .teachers-section, .admins-section {
     overflow-x: auto; /* Allows horizontal scrolling for tables */
