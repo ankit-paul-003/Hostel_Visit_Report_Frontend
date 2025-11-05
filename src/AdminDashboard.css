@@ -1,113 +1,79 @@
 .admin-dashboard {
-    width: 95%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1200px; /* Added max-width for better desktop layout */
     margin: 20px auto;
     padding: 10px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-top: 20px;
-}
-
-h2, h3 {
+  }
+  
+  h2, h3 {
     text-align: center;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-section {
-    margin-bottom: 30px;
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-}
-
-/* Table Styling for Responsiveness */
-.forms-section, .teachers-section, .admins-section {
-    overflow-x: auto; /* Allows horizontal scrolling for tables */
-}
-
-table {
+    margin-bottom: 10px;
+  }
+  
+  table {
     width: 100%;
-    min-width: 600px; /* Minimum width to prevent excessive squishing */
     border-collapse: collapse;
     margin-top: 10px;
-}
-
-th, td {
-    padding: 12px 10px;
+  }
+  
+  th, td {
+    padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
-    vertical-align: middle;
-    font-size: 0.9em;
-}
-
-th {
+  }
+  
+  th {
     background: #f4f4f4;
-    font-weight: bold;
-}
-
-button {
+  }
+  
+  button {
     padding: 8px 12px;
     background: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
-    white-space: nowrap;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background: #0056b3;
-}
-
-/* Form Sections (Add Teacher/Admin) */
-.add-teacher-section form,
-.add-admin-section form {
+  }
+  
+  .add-teacher-section form,
+  .add-admin-section form { /* Added .add-admin-section form for consistency */
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-top: 10px;
-}
-
-.add-teacher-section input,
-.add-admin-section input {
-    padding: 10px;
+  }
+  
+  .add-teacher-section input,
+  .add-admin-section input { /* Added .add-admin-section input for consistency */
+    padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    flex-grow: 1;
-    min-width: 150px;
-}
-
-/* Download Section */
-.download-section {
+    flex-grow: 1; /* Allow inputs to grow */
+    min-width: 150px; /* Ensure inputs are usable */
+  }
+  
+  .download-section {
     text-align: center;
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+  }
+  
+  .download-section select {
+    padding: 8px;
+    margin-right: 10px;
+  }
 
-.download-section select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
+  /* Basic Mobile Responsiveness */
+  @media (max-width: 600px) {
     .admin-dashboard {
-        width: 100%;
-        margin: 10px 0;
+        width: 98%;
         padding: 5px;
-    }
-
-    th, td {
-        padding: 8px 5px;
-        font-size: 0.8em;
     }
 
     /* Ensure forms stack vertically */
@@ -124,55 +90,11 @@ button:hover {
         width: 100%;
         min-width: unset;
     }
-    
-    .download-section {
-        flex-direction: column;
-        align-items: stretch;
-    }
 
-    .download-section select,
-    .download-section button {
-        width: 100%;
-    }
-    
-    /* Enhanced table responsiveness for forms section */
-    .forms-section table, 
-    .forms-section thead, 
-    .forms-section tbody, 
-    .forms-section th, 
-    .forms-section td, 
-    .forms-section tr {
+    /* Allow tables to scroll horizontally */
+    table {
         display: block;
-    }
-
-    .forms-section thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    .forms-section tr {
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
-
-    .forms-section td {
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 50%;
-        text-align: right;
-    }
-
-    .forms-section td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
+        overflow-x: auto;
         white-space: nowrap;
-        text-align: left;
-        font-weight: bold;
     }
-}
+  }
