@@ -193,14 +193,14 @@ const AdminDashboard = () => {
           <tbody>
             {forms.map((form) => (
               <tr key={form.id}>
-                <td>{form.teacher_name}</td>
-                <td>{form.hostel_name}</td>
-                <td>{form.created_at}</td>
-                <td>{form.general_comments}</td>
-                <td>{form.maintenance_required}</td>
-                <td>{form.complaints}</td>
+                <td data-label="Teacher Name">{form.teacher_name}</td>
+                <td data-label="Hostel Name">{form.hostel_name}</td>
+                <td data-label="Date & Time">{form.created_at}</td>
+                <td data-label="Comments">{form.general_comments}</td>
+                <td data-label="Maintenance">{form.maintenance_required}</td>
+                <td data-label="Complaints">{form.complaints}</td>
                 {isPaul && (
-                  <td>
+                  <td data-label="Actions">
                     <button onClick={() => handleDeleteForm(form.id)}>Delete</button>
                   </td>
                 )}
