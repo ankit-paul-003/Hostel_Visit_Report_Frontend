@@ -1,5 +1,5 @@
 .admin-dashboard {
-    width: 90%;
+    width: 95%;
     max-width: 1200px; /* Added max-width for better desktop layout */
     margin: 20px auto;
     margin-top: 600px;
@@ -71,10 +71,15 @@
   }
 
   /* Basic Mobile Responsiveness */
-  @media (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
     .admin-dashboard {
         width: 98%;
         padding: 5px;
+    }
+
+    th, td {
+        padding: 8px; /* Reduced padding for better fit */
+        font-size: 14px;
     }
 
     /* Ensure forms stack vertically */
@@ -99,3 +104,29 @@
         white-space: nowrap;
     }
   }
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .download-section select,
+  .download-section button {
+    width: 100%;
+    margin-top: 5px;
+    margin-right: 0;
+  }
+}
